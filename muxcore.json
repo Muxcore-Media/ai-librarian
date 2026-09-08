@@ -1,0 +1,10 @@
+{
+  "name": "AI Librarian",
+  "description": "AI library QA: unidentified files, wrong matches, collection completeness",
+  "version": "0.1.0",
+  "author": "Muxcore-Media",
+  "roles": ["ai"],
+  "capabilities": ["ai.librarian", "settings"],
+  "contracts": ["contracts-ai"],
+  "minCoreVersion": "0.5.8"
+}

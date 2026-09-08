@@ -1,0 +1,4 @@
+/ai-librarian
+*.exe
+*.test
+dist/
