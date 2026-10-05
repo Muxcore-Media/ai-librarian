@@ -9,11 +9,11 @@ import (
 	"os"
 	"sync"
 
+	manifest "github.com/Muxcore-Media/ai-librarian"
 	"github.com/Muxcore-Media/core/pkg/contracts"
+	modulesdk "github.com/Muxcore-Media/core/sdk/go/module"
 	"google.golang.org/grpc"
 )
-
-const moduleVersion = "0.1.0"
 
 type Module struct {
 	id, grpcAddr, httpAddr string
@@ -49,7 +49,7 @@ func New(cfg Config) *Module {
 
 func (m *Module) Info() contracts.ModuleInfo {
 	return contracts.ModuleInfo{
-		ID: m.id, Name: "AI Librarian", Version: moduleVersion,
+		ID: m.id, Name: "AI Librarian", Version: modulesdk.ManifestVersion(manifest.ManifestJSON),
 		Roles: []string{"ai"}, Description: "AI library QA: unidentified files, wrong matches, collection completeness",
 		Author: "Muxcore-Media", Capabilities: []string{"ai.librarian", "settings"},
 		MinCoreVersion: MinCoreVersion, HTTPAddr: m.grpcAddr,
