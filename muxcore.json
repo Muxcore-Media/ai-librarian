@@ -1,7 +1,7 @@
 {
   "name": "AI Librarian",
   "description": "AI library QA: unidentified files, wrong matches, collection completeness",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Muxcore-Media",
   "roles": [
     "ai"
